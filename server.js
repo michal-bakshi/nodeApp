@@ -1,13 +1,14 @@
 const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 // הגדרת dotenv
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-
+app.use(cors());
 // הגדרת ה-API Key
 const apiKey = process.env.RENDER_API_KEY;
 
